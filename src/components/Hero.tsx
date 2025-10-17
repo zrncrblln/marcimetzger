@@ -1,17 +1,20 @@
-import { Button } from '@/components/ui/button';
-import { ChevronDown } from 'lucide-react';
-import heroImage from '@/assets/hero-pahrump.jpg';
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
+import heroImage from "@/assets/hero-pahrump.jpg";
 
 export const Hero = () => {
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
+    const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -32,12 +35,13 @@ export const Hero = () => {
           Pahrump Realtor
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 font-light">
-          Your trusted partner in finding the perfect home in Nevada's desert paradise
+          Your trusted partner in finding the perfect home in Nevada's desert
+          paradise
         </p>
         <Button
           onClick={scrollToContact}
           size="lg"
-          className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-6 rounded-sm font-semibold shadow-lg hover:shadow-xl transition-all"
+          className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-6 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all"
         >
           Call Now
         </Button>
@@ -46,8 +50,8 @@ export const Hero = () => {
       {/* Scroll Indicator */}
       <button
         onClick={() => {
-          const element = document.getElementById('about');
-          if (element) element.scrollIntoView({ behavior: 'smooth' });
+          const element = document.getElementById("about");
+          if (element) element.scrollIntoView({ behavior: "smooth" });
         }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-foreground/60 hover:text-primary transition-colors animate-bounce"
         aria-label="Scroll to next section"

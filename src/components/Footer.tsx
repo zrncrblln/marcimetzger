@@ -1,3 +1,5 @@
+import { Instagram, Facebook, Linkedin, Star } from "lucide-react";
+
 export const Footer = () => {
   return (
     <footer className="bg-background border-t border-border py-12">
@@ -9,11 +11,48 @@ export const Footer = () => {
                 Marci Metzger
               </span>
             </h3>
-            <p className="text-sm text-muted-foreground">The Ridge Realty Group</p>
+            <p className="text-sm text-muted-foreground">
+              The Ridge Realty Group
+            </p>
+          </div>
+
+          {/* Social Media Icons */}
+          <div className="flex items-center justify-center space-x-6 md:space-x-4">
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Follow us on Instagram"
+            >
+              <Instagram size={24} />
+            </a>
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Follow us on Facebook"
+            >
+              <Facebook size={24} />
+            </a>
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Connect with us on LinkedIn"
+            >
+              <Linkedin size={24} />
+            </a>
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Read our Yelp reviews"
+            >
+              <Star size={24} />
+            </a>
           </div>
 
           <div className="text-center md:text-right text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Marci Metzger. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} Marci Metzger. All rights
+              reserved.
+            </p>
             <p className="mt-1">Pahrump, Nevada Real Estate</p>
           </div>
         </div>

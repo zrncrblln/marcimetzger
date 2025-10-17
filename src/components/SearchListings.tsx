@@ -1,13 +1,19 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Search } from 'lucide-react';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Search } from "lucide-react";
 
 export const SearchListings = () => {
-  const [priceRange, setPriceRange] = useState('');
-  const [propertyType, setPropertyType] = useState('');
-  const [bedrooms, setBedrooms] = useState('');
+  const [priceRange, setPriceRange] = useState("");
+  const [propertyType, setPropertyType] = useState("");
+  const [bedrooms, setBedrooms] = useState("");
 
   const handleSearch = () => {
     // In a real application, this would navigate to a search results page
@@ -16,15 +22,20 @@ export const SearchListings = () => {
       propertyType,
       bedrooms,
     };
-    console.log('Search params:', searchParams);
-    alert('Search functionality will be connected to your MLS listings database');
+    console.log("Search params:", searchParams);
+    alert(
+      "Search functionality will be connected to your MLS listings database"
+    );
   };
 
   return (
-    <section id="search" className="py-24 bg-background relative overflow-hidden">
+    <section
+      id="search"
+      className="py-24 bg-background relative overflow-hidden"
+    >
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
-      
+
       <div className="container mx-auto px-4 lg:px-8 relative">
         <div className="text-center mb-12 animate-fade-in">
           <p className="text-primary text-sm font-medium uppercase tracking-wider mb-2">
@@ -34,7 +45,8 @@ export const SearchListings = () => {
             Search Listings
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Use our advanced search to find properties that match your exact criteria
+            Use our advanced search to find properties that match your exact
+            criteria
           </p>
         </div>
 
@@ -43,7 +55,9 @@ export const SearchListings = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Price Range */}
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Price Range</label>
+                <label className="text-sm font-medium text-foreground">
+                  Price Range
+                </label>
                 <Select value={priceRange} onValueChange={setPriceRange}>
                   <SelectTrigger className="bg-background">
                     <SelectValue placeholder="Select price" />
@@ -60,7 +74,9 @@ export const SearchListings = () => {
 
               {/* Property Type */}
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Property Type</label>
+                <label className="text-sm font-medium text-foreground">
+                  Property Type
+                </label>
                 <Select value={propertyType} onValueChange={setPropertyType}>
                   <SelectTrigger className="bg-background">
                     <SelectValue placeholder="Select type" />
@@ -77,7 +93,9 @@ export const SearchListings = () => {
 
               {/* Bedrooms */}
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Bedrooms</label>
+                <label className="text-sm font-medium text-foreground">
+                  Bedrooms
+                </label>
                 <Select value={bedrooms} onValueChange={setBedrooms}>
                   <SelectTrigger className="bg-background">
                     <SelectValue placeholder="Any" />
@@ -99,7 +117,7 @@ export const SearchListings = () => {
                 </label>
                 <Button
                   onClick={handleSearch}
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-11"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-11 rounded-lg"
                 >
                   <Search className="w-5 h-5 mr-2" />
                   Search
@@ -123,16 +141,16 @@ export const SearchListings = () => {
           </div>
 
           <p className="text-center text-muted-foreground mt-8">
-            Can't find what you're looking for?{' '}
+            Can't find what you're looking for?{" "}
             <button
               onClick={() => {
-                const element = document.getElementById('contact');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
+                const element = document.getElementById("contact");
+                if (element) element.scrollIntoView({ behavior: "smooth" });
               }}
               className="text-primary hover:underline font-medium"
             >
               Contact me directly
-            </button>{' '}
+            </button>{" "}
             for personalized assistance
           </p>
         </div>
