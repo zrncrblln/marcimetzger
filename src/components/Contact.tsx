@@ -1,6 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Instagram,
+  Facebook,
+  Linkedin,
+  Star,
+} from "lucide-react";
 
 export const Contact = () => {
   return (
@@ -101,6 +109,40 @@ export const Contact = () => {
                   title="Pahrump, Nevada Location Map"
                 ></iframe>
               </div>
+            </div>
+          </div>
+
+          {/* Social Media Icons */}
+          <div className="flex justify-center mt-12">
+            <div className="flex items-center space-x-6">
+              <a
+                href="#"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram size={24} />
+              </a>
+              <a
+                href="#"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Follow us on Facebook"
+              >
+                <Facebook size={24} />
+              </a>
+              <a
+                href="#"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Connect with us on LinkedIn"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="#"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Read our Yelp reviews"
+              >
+                <Star size={24} />
+              </a>
             </div>
           </div>
         </div>
