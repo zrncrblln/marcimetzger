@@ -1,3 +1,8 @@
-- [x] Edit Footer.tsx to add sponsors section with 4 logos (logo1.jpg, logo2.jpg, logo3.jpg, logo4.jpg) in a 2x2 grid
-- [x] Style the sponsors section to match site design (muted colors, hover effects)
-- [x] Test footer layout on different screen sizes (dev server running at http://localhost:8081/)
+# Deployment Plan for Vite React App on Localhost
+
+## Steps to Complete
+
+- [x] Install project dependencies using npm install
+- [x] Run the development server using npm run dev
+- [x] Verify the server starts without errors on localhost:8080
+- [x] Optionally, open browser to confirm the app loads (browser tool disabled, but server is running)
