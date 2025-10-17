@@ -1,18 +1,38 @@
-import { useState } from 'react';
-import gallery1 from '@/assets/gallery-1.jpg';
-import gallery2 from '@/assets/gallery-2.jpg';
-import gallery3 from '@/assets/gallery-3.jpg';
-import gallery4 from '@/assets/gallery-4.jpg';
-import gallery5 from '@/assets/gallery-5.jpg';
-import gallery6 from '@/assets/gallery-6.jpg';
+import { useState } from "react";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
 
 const galleryImages = [
-  { id: 1, src: gallery1, title: 'Luxury Living Room', category: 'Interior' },
-  { id: 2, src: gallery2, title: 'Gourmet Kitchen', category: 'Interior' },
-  { id: 3, src: gallery3, title: 'Master Bedroom Suite', category: 'Interior' },
-  { id: 4, src: gallery4, title: 'Pool & Patio', category: 'Exterior' },
-  { id: 5, src: gallery5, title: 'Golf Course Community', category: 'Exterior' },
-  { id: 6, src: gallery6, title: 'Walk-in Closet', category: 'Interior' },
+  {
+    id: 1,
+    src: gallery1,
+    title: "Mountain Falls Golf Club",
+    category: "Exterior",
+  },
+  { id: 2, src: gallery2, title: "Ailanto Ave", category: "Exterior" },
+  {
+    id: 3,
+    src: gallery3,
+    title: "Daisy Ln, Palm Desert",
+    category: "Exterior",
+  },
+  { id: 4, src: gallery4, title: "Adkisson St", category: "Exterior" },
+  {
+    id: 5,
+    src: gallery5,
+    title: "Hawes Crossing",
+    category: "Exterior",
+  },
+  {
+    id: 6,
+    src: gallery6,
+    title: "Beacon Ridge Dr",
+    category: "Exterior",
+  },
 ];
 
 export const Gallery = () => {
@@ -29,7 +49,8 @@ export const Gallery = () => {
             Photo Gallery
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Explore stunning interiors and exteriors from our exclusive Pahrump properties
+            Explore stunning interiors and exteriors from our exclusive Pahrump
+            properties
           </p>
         </div>
 
@@ -49,8 +70,12 @@ export const Gallery = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                 <div>
-                  <p className="text-sm text-primary font-medium mb-1">{image.category}</p>
-                  <h3 className="text-xl font-bold text-foreground">{image.title}</h3>
+                  <p className="text-sm text-primary font-medium mb-1">
+                    {image.category}
+                  </p>
+                  <h3 className="text-xl font-bold text-foreground">
+                    {image.title}
+                  </h3>
                 </div>
               </div>
             </div>
@@ -72,7 +97,9 @@ export const Gallery = () => {
               </button>
               <img
                 src={galleryImages.find((img) => img.id === selectedImage)?.src}
-                alt={galleryImages.find((img) => img.id === selectedImage)?.title}
+                alt={
+                  galleryImages.find((img) => img.id === selectedImage)?.title
+                }
                 className="max-w-full max-h-[90vh] object-contain rounded-sm shadow-2xl"
               />
             </div>
