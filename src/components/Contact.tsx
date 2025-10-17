@@ -1,100 +1,104 @@
-import { Button } from './ui/button';
-import { MapPin, Clock, Phone, ArrowRight } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
-export function Contact() {
+export const Contact = () => {
   return (
-    <section id="contact" className="relative py-32 overflow-hidden bg-black">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-sm text-white/60 uppercase tracking-widest">Get In Touch</span>
-          <h2 className="text-4xl md:text-5xl text-white mt-6 tracking-tight">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-white/70 mt-6 leading-relaxed">
-            Contact us today to begin your real estate journey. We're here to help you 
-            every step of the way.
-          </p>
-        </div>
+    <section id="contact" className="py-24 bg-background">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16 animate-fade-in">
+            <p className="text-primary text-sm font-medium uppercase tracking-wider mb-2">
+              Get In Touch
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Call or Visit
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Ready to find your dream home? I'm here to help.
+            </p>
+          </div>
 
-        {/* Contact Info Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {/* Address */}
-          <div className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
-            <div className="flex flex-col items-center text-center space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 group-hover:border-white/20 transition-all">
-                <MapPin className="text-white" size={24} />
+          <div className="grid lg:grid-cols-2 gap-12 mb-12">
+            {/* Contact Info */}
+            <div className="space-y-6">
+              <Card className="bg-card border-border hover:border-primary transition-all group">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                    <Phone className="w-7 h-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Phone</h3>
+                    <a
+                      href="tel:+17027275555"
+                      className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                    >
+                      (702) 727-5555
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card border-border hover:border-primary transition-all group">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                    <Mail className="w-7 h-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                    <a
+                      href="mailto:marci@theridgerealtygroup.com"
+                      className="text-muted-foreground hover:text-primary transition-colors break-all"
+                    >
+                      marci@theridgerealtygroup.com
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card border-border hover:border-primary transition-all group">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                    <MapPin className="w-7 h-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Office Location</h3>
+                    <p className="text-muted-foreground">
+                      Pahrump, Nevada 89048
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="pt-4">
+                <Button
+                  size="lg"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6 rounded-sm font-semibold shadow-lg hover:shadow-xl transition-all"
+                  onClick={() => window.location.href = 'tel:+17027275555'}
+                >
+                  Call Now to Get Started
+                </Button>
               </div>
-              <div>
-                <h3 className="text-lg text-white mb-2">
-                  Our Office
-                </h3>
-                <p className="text-white/70 leading-relaxed">
-                  3190 HW-160, Suite F<br />
-                  Pahrump, Nevada 89048<br />
-                  United States
-                </p>
+            </div>
+
+            {/* Map */}
+            <div className="animate-fade-in">
+              <div className="bg-card border border-border rounded-sm overflow-hidden h-full min-h-[400px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206444.82238267266!2d-116.20944555!3d36.2082635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c92ab1fc3e3f0d%3A0x5c3c7bc0f8c0d7b7!2sPahrump%2C%20NV!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: '400px' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Pahrump, Nevada Location Map"
+                ></iframe>
               </div>
             </div>
           </div>
-
-          {/* Hours */}
-          <div className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
-            <div className="flex flex-col items-center text-center space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 group-hover:border-white/20 transition-all">
-                <Clock className="text-white" size={24} />
-              </div>
-              <div>
-                <h3 className="text-lg text-white mb-2">
-                  Office Hours
-                </h3>
-                <p className="text-white/70 leading-relaxed">
-                  Open Daily<br />
-                  8:00 AM – 7:00 PM<br />
-                  <span className="text-sm text-white/60">Outside hours by appointment</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact */}
-          <div className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
-            <div className="flex flex-col items-center text-center space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 group-hover:border-white/20 transition-all">
-                <Phone className="text-white" size={24} />
-              </div>
-              <div>
-                <h3 className="text-lg text-white mb-2">
-                  Get In Touch
-                </h3>
-                <p className="text-white/70 leading-relaxed">
-                  Schedule a consultation<br />
-                  to discuss your<br />
-                  real estate needs
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <Button
-            size="lg"
-            className="bg-white hover:bg-white/90 text-black rounded-full px-10 h-14 shadow-lg hover:shadow-xl transition-all group"
-          >
-            Schedule a Consultation
-            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-          </Button>
-          <p className="text-sm text-white/60 mt-4">
-            Available for appointments outside regular office hours
-          </p>
         </div>
       </div>
-
-      {/* Decorative gradient orbs */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
     </section>
   );
-}
+};
