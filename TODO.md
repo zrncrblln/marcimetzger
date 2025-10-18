@@ -1,5 +1,7 @@
-# TODO List for Centering Hero Text and Aligning to Arrow
+# Deployment and Fix Blank Pages Task
 
-- [x] Move the scroll indicator button inside the content div in src/components/Hero.tsx, placing it below the "Call Now" button
-- [x] Adjust the button's classes to ensure horizontal centering (e.g., add mx-auto and remove absolute positioning classes)
-- [ ] Change layout to place "Call Now" button and arrow on the same horizontal line, both centered
+- [x] Update vite.config.ts to set base path to '/marcimetzger/' for GitHub Pages
+- [x] Create public/404.html to handle client-side routing for SPA
+- [x] Run npm run build to generate updated dist folder
+- [ ] Commit and push changes to main branch to trigger GitHub Actions deployment
+- [ ] Verify the live site works without blank pages
