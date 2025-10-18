@@ -161,16 +161,7 @@ Recommended hosting platforms:
 - GitHub Pages
 - AWS S3 + CloudFront
 
-## 📞 Contact
 
-For questions about this project or real estate services:
-
-- **Marci Metzger**
-- **Phone**: (702) 727-5555
-- **Email**: marci@theridgerealtygroup.com
-- **Location**: Pahrump, Nevada 89048
-
-## 📄 License
 
 This project is private and proprietary. All rights reserved.
 
