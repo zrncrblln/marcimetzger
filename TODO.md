@@ -4,4 +4,5 @@
 - [x] Create public/404.html to handle client-side routing for SPA
 - [x] Run npm run build to generate updated dist folder
 - [x] Commit and push changes to main branch to trigger GitHub Actions deployment
+- [x] Deploy dist folder to gh-pages branch using git subtree
 - [x] Verify the live site works without blank pages

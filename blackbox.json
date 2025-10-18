@@ -1,0 +1,7 @@
+{
+  "blackbox": {
+    "agent": {
+      "browserTool": true
+    }
+  }
+}
