@@ -1,3 +1,5 @@
-- [x] Edit Footer.tsx to add sponsors section with 4 logos (logo1.jpg, logo2.jpg, logo3.jpg, logo4.jpg) in a 2x2 grid
-- [x] Style the sponsors section to match site design (muted colors, hover effects)
-- [x] Test footer layout on different screen sizes (dev server running at http://localhost:8081/)
+# TODO List for Centering Hero Text and Aligning to Arrow
+
+- [x] Move the scroll indicator button inside the content div in src/components/Hero.tsx, placing it below the "Call Now" button
+- [x] Adjust the button's classes to ensure horizontal centering (e.g., add mx-auto and remove absolute positioning classes)
+- [ ] Change layout to place "Call Now" button and arrow on the same horizontal line, both centered
