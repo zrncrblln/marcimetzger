@@ -5,4 +5,4 @@
 - [x] Clean old build files
 - [x] Rebuild the project
 - [x] Deploy to GitHub Pages
-- [ ] Verify deployment and check console for errors
+- [x] Verify deployment and check console for errors
