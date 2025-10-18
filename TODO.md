@@ -1,8 +1,5 @@
-# Deployment Plan for Vite React App on Localhost
+# TODO List for Adding Correct Basename
 
-## Steps to Complete
-
-- [x] Install project dependencies using npm install
-- [x] Run the development server using npm run dev
-- [x] Verify the server starts without errors on localhost:8080
-- [x] Optionally, open browser to confirm the app loads (browser tool disabled, but server is running)
+- [x] Edit src/App.tsx to add basename={import.meta.env.BASE_URL} to BrowserRouter
+- [x] Build the project and preview to test basename in deployment simulation
+- [ ] Manually verify routing by accessing the preview URL
