@@ -55,7 +55,9 @@ export const Hero = () => {
         }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-foreground/60 hover:text-primary transition-colors animate-bounce"
         aria-label="Scroll to next section"
-      ></button>
+      >
+        <ChevronDown size={40} />
+      </button>
     </section>
   );
 };
